@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #111;
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(10, 10, 10, 0.95);
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
+
+
+/* MENU */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 28px 0;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a.ativo {
+    color: white;
+    border-bottom: 3px solid #E30613;
+}
+
+
+/* BOTÃO */
+
+.botao-vermelho {
+    background: #E30613;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    padding: 13px 25px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    display: inline-block;
+
+    transition: 0.3s;
+}
+
+.botao-vermelho:hover {
+    background: #c9000d;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 5% 50px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.85) 0%,
+            rgba(0,0,0,0.55) 50%,
+            rgba(0,0,0,0.15) 100%
+        ),
+        url('../img/caminhao.jpg' );
+
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+/* TEXTO */
+
+.banner-conteudo {
+    max-width: 600px;
+}
+
+.banner h1 {
+
+    font-size: 36px;
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+.banner h1 span {
+    color: #E30613;
+}
+
+.banner p {
+
+    max-width: 430px;
+
+    color: #ddd;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.banner .botao-vermelho {
+    padding: 13px 22px;
+}
+
+.banner .botao-vermelho span {
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+
+/* =========================
+   BARRA DE BUSCA
+========================= */
+
+.busca {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 88%;
+    max-width: 1000px;
+
+    margin: -15px auto 0;
+
+    background: white;
+
+    padding: 18px 25px;
+
+    border-radius: 4px;
+
+    display: flex;  
+
+    gap: 20px;
+
+    align-items: end;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.campo {
+    flex: 1;
+    
+}
+
+.campo label {
+
+    display: flex;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+    color: #333;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+label img{
+  width: 20px;
+  margin-top:-5px ;
+  margin-right: 15px;
+  
+}
+.campo select {
+    width: 100%;
+    height: 36px;
+
+    padding: 0 40px 0 12px;
+
+    border: 1px solid #160808;
+    border-radius: 4px;
+
+    background-color: rgb(37, 17, 17);
+
+    font-size: 11px;
+
+    appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5' fill='none' stroke='%23555' stroke-width='2'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+}
+
+.campo select,
+.campo input {
+
+    width: 100%;
+
+    height: 36px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+    background: white;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+.campo select:focus,
+.campo input:focus {
+    border-color: #E30613;
+}
+
+
+/* BOTÃO BUSCAR */
+
+.botao-buscar {
+
+    height: 36px;
+
+    min-width: 145px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #E30613;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-buscar:hover {
+    background: #c9000d;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+
+    width: 90%;
+    max-width: 1050px;
+
+    margin: 45px auto 0;
+}
+
+
+/* TÍTULO */
+
+.titulo-secao {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.titulo-secao span {
+
+    width: 28px;
+    height: 2px;
+
+    background: #E30613;
+
+    display: block;
+}
+
+.titulo-secao h2 {
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    color: #171717;
+}
+
+
+/* =========================
+   MARCAS
+========================= */
+
+.marcas {
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 12px;
+}
+
+.marca {
+
+    height: 55px;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 4px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    transition: 0.3s;
+}
+
+.marca:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+}
+
+.marca img {
+
+    max-width: 90%;
+
+    max-height: 35px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   CARDS DE OPERAÇÃO
+========================= */
+
+.operacoes {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    padding-bottom: 25px;
+}
+
+.card-op {
+
+    height: 145px;
+
+    border-radius: 5px;
+
+    background-size: cover;
+
+    background-position: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: end;
+
+    padding: 18px;
+
+    color: white;
+}
+
+
+/* ESCURECER IMAGEM */
+
+.card-op::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 20%,
+        rgba(0,0,0,0.85)
+    );
+}
+
+
+/* TEXTO */
+
+.card-op > div {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.card-op h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.card-op p {
+
+    font-size: 10px;
+
+    margin-bottom: 8px;
+
+    color: #eee;
+}
+
+.card-op a {
+
+    color: white;
+
+    font-size: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.rodoviario {
+    background-image: url("/img/image\ 9.png");
+}
+
+.regional {
+    background-image: url("../img/image\ 10.png");
+}
+
+.misto {
+    background-image: url("../img/image\ 11.png");
+}
+
+footer {
+
+    background: #111;
+
+    color: white;
+
+    min-height: 100px;
+
+    padding: 25px 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-logo img {
+
+    width: 110px;
+}
+
+.footer-info {
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+.footer-redes {
+
+    display: flex;
+
+    gap: 15px;
+
+    color: #aaa;
+
+    font-size: 10px;
+}
+
+.footer-texto {
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .banner {
+        min-height: 400px;
+        padding: 100px 25px 50px;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .busca {
+
+        width: 90%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-top: -10px;
+    }
+
+    .botao-buscar {
+        width: 100%;
+    }
+
+    .marcas {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .operacoes {
+
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
